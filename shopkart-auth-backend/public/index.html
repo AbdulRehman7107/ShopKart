@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopKart Sign In</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="login-box">
+      <h1>ShopKart</h1>
+      <h2>Sign in</h2>
+      <p>Enter your account details to continue.</p>
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter password" minlength="6" required />
+        <button type="submit">Sign in</button>
+      </form>
+      <p id="message" role="status"></p>
+      <section id="profile" class="hidden">
+        <hr />
+        <h3>Signed in successfully</h3>
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+        <button id="logoutButton" class="logout" type="button">Log out</button>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:5000
+
+### Register a customer
+POST {{baseUrl}}/customers/register
+Content-Type: application/json
+
+{
+  "fullName": "John Doe",
+  "email": "john@gmail.com",
+  "password": "john123",
+  "phone": "9876543210"
+}
+
+### Log in (REST Client preserves the HttpOnly cookie for the following requests)
+POST {{baseUrl}}/customers/login
+Content-Type: application/json
+
+{
+  "email": "john@gmail.com",
+  "password": "john123"
+}
+
+### Protected profile
+GET {{baseUrl}}/customers/me
+
+### Bonus: change password
+PATCH {{baseUrl}}/customers/change-password
+Content-Type: application/json
+
+{
+  "oldPassword": "john123",
+  "newPassword": "newpass123"
+}
+
+### Log out
+POST {{baseUrl}}/customers/logout
