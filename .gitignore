@@ -1,0 +1,8 @@
+﻿node_modules/
+.npm-cache/
+**/.npm-cache/
+.env
+.env.*
+!.env.example
+dist/
+build/
